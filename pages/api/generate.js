@@ -19,9 +19,9 @@ const generateAction = async (req, res) => {
   );
 
   // Check for different statuses to send proper payload
-  // console.log("buffer.body",Buffer.from(buffer, 'utf8'))
   if (response.ok) {
     const buffer = await response.arrayBuffer();
+    console.log("buffer.body",Buffer.from(buffer, 'utf8'))
     // Convert to base64
     const base64 = bufferToBase64(buffer);
     // Make sure to change to base64
