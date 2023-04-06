@@ -3,6 +3,11 @@ const generateAction = async (req, res) => {
   
   const input = JSON.parse(req.body).input;
   
+  console.log('body',req.body);
+  console.log('body',process.env.HF_AUTH_KEY);
+
+
+
   const response = await fetch(
     `https://api-inference.huggingface.co/models/borgsid/borgsidlukee`,
     {
