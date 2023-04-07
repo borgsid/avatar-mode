@@ -40,7 +40,7 @@ import Image from 'next/image';
         headers: {
           'Content-Type': 'image/jpeg',
         },
-        body: JSON.stringify({ input }).replace('sid','borgsidlukee'),
+        body: JSON.stringify({ input }).toLowerCase().replace('sid','borgsidlukee'),
       });
 
       const data = await response.json();
