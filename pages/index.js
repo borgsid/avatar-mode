@@ -1,7 +1,7 @@
 import { useState,useEffect } from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
-import buildspaceLogo from '../assets/buildspace-logo.png';
+// import buildspaceLogo from '../assets/buildspace-logo.png';
 
   const Home = () => {
     const maxRetries = 20;
@@ -138,13 +138,13 @@ import buildspaceLogo from '../assets/buildspace-logo.png';
       </div>
       <div className="badge-container grow">
         <a
-          href="https://buildspace.so/builds/ai-avatar"
+          href="https://instagr.am/borgsid"
           target="_blank"
           rel="noreferrer"
         >
           <div className="badge">
-            <Image src={buildspaceLogo} alt="buildspace logo" />
-            <p>build with buildspace</p>
+            {/* <Image src={buildspaceLogo} alt="buildspace logo" /> */}
+            <p>Made by Borgsid</p>
           </div>
         </a>
       </div>
