@@ -16,6 +16,13 @@ import Image from 'next/image';
     const onChange = (event) => {
       setInput(event.target.value);
     };
+    const keyPress = async(e) =>  {
+      if (e != undefined && !isGenerating) {
+        var evtobj = e
+        if (evtobj.code == 'Enter' && evtobj.ctrlKey && input?.length>0)
+          await generateAction();
+      }
+    }
     const generateAction = async () => {
       console.log('Generating...');	
       if (isGenerating && retry === 0) 
@@ -112,7 +119,9 @@ import Image from 'next/image';
           </div>
           {/* Add prompt container here */}
           <div className="prompt-container">
-            <input className="prompt-box" value={input} onChange={onChange}   />
+            <input className="prompt-box" value={input} 
+            onKeyPress={keyPress}
+            onChange={onChange}   />
             <div className="prompt-buttons">
               <a 
                 className={
