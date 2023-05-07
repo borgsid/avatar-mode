@@ -42,4 +42,4 @@ const bufferToBase64 = (buffer) => {
   )
   return `data:image/png;base64,${base64}`;
 };
-export default generateAction;
+export default generateAction; 
